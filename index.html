@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eddie Santos.dev</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/css/all.min.css">
+	<link rel="stylesheet" href="js/simple-lightbox.css">
+	<link rel="stylesheet" href="style-global.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-responsive.css">
+	<script src="js/jquery.js"></script>
+	<script src="form/contactform.js"></script>
+	<script src="js/simple-lightbox.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+<body id="home">
+
+
+	<header class="fl w100">
+		<div class="banner fl w100">
+			<div class="headerpic center">
+				<img src="images/DSC_7102.JPG" alt="" class="img-fit" />
+			</div>
+		</div>
+
+		<br clear="all" />
+
+		<div class="container">
+			
+			<div class="text fl w100">
+				<h2><strong>Hi! I'm Eddie!</strong> I am a Software Engineer based in New York.</h2>
+				<p>
+					I am a passionate and dedicated software engineer with a strong background in developing innovative solutions to complex problems. With expertise in C++, Java and javascript, I strive to create efficient, scalable, and user-friendly applications. My journey in software development has equipped me with the skills to excel in both collaborative team environments and independent projects. Explore my portfolio to see how I blend creativity with technical proficiency to deliver high-quality software solutions.
+				</p>
+			</div>
+			
+
+
+			<div class="headermenu center">
+				<nav id="headnav">
+					<ul>
+						<li class="active"><a href="#home">Home</a></li>
+						<li><a href="#portfolio">Projects</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="resume/Eddie_Santos_Resume_2024.pdf" target="_blank">Resume</a></li>
+					</ul>
+				</nav>
+
+				<div class="social">
+					<a href="https://www.linkedin.com/in/eddie-santos-530a52290/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+				</div>
+			</div>
+
+		</div>
+	</header>
+	<!--HEADER-->
+	
+
+
+
+	<section class="portfolio fl w100" id="portfolio">
+		<div class="container">
+			
+
+			<div class="items-wrap fl w100 flex-sb gallery">
+
+
+				<div class="item">
+					<div class="text">
+						<h3>Craft Beer Brewery Finder</h3>
+						<a href="#" class="view" onclick="toggleMoreContent(event, 'project1')" >More <i class="fa-solid fa-angle-right"></i></a>
+						<div id="project1" class="more-content">
+							<p>This project helps users find craft beer breweries near their location. It includes features like a search function, maps integration, and user reviews.</p>
+						</div>
+					</div>
+					<a href="images/craft_beer.jpeg" class="imagelink"><img src="images/craft_beer.jpeg" alt=""></a>
+				</div>
+				<!--1-->
+
+				<div class="item">
+					<div class="text">
+						<h3>Image Detector</h3>
+						<a href="#" class="view" onclick="toggleMoreContent(event, 'project2')" >More <i class="fa-solid fa-angle-right"></i></a>
+						<div id="project2" class="more-content">
+							<p>This project is an image detection system that identifies objects in images using machine learning algorithms. It supports various types of objects and can be integrated into different applications.</p>
+						</div>
+					</div>
+					<a href="images/object detection.jpg" class="imagelink"><img src="images/object detection.jpg" alt=""></a>
+				</div>
+				<!--2-->
+
+
+			</div>
+			<!--ITEMSWRAP-->
+
+		</div>
+	</section>
+	<!--PORTFOLIO-->
+	<script>
+		function toggleMoreContent(event, id) {
+			event.preventDefault();
+			var content = document.getElementById(id);
+			if (content.style.display === "none" || content.style.display === "") {
+				content.style.display = "block";
+			} else {
+				content.style.display = "none";
+			}
+		}
+	</script>
+
+
+
+
+
+	<section class="contact fl w100" id="contact">
+		<div class="container">
+			
+			<h2>Contact</h2>
+			<p>
+				Feel free to Contact Me. Or Email: <a href="#">eddiesantos459@gmail.com</a> or Call: <a href="tel:#">(516)343-2232</a>
+			</p>
+
+
+			<div class="formlayout center">
+				<form id="contactform" class="fl w100 flex-sb" method="post" action="form/contactform.php">
+					<input type="text" name="name" placeholder="Name*" class="half" required>
+					<input type="email" name="email" placeholder="Email Address*" class="half" required>
+					<input type="text" name="subject" placeholder="Subject*" required>
+					<textarea name="message" placeholder="Message..." required></textarea>
+					<br clear="all">
+					<button type="submit" id="submit">Submit &nbsp; <i class="fa-solid fa-angle-right"></i></button>
+				</form>
+			</div>
+
+
+		</div>
+	</section>
+	<!--CONTACT-->
+
+
+
+
+
+
+
+	<footer class="fl w100">
+		<div class="container">
+			
+			<div class="copyright">
+				Copyright &copy; <span id="year"></span> <a href="#">PersonalSpace</a>.
+			</div>
+
+
+			<a href="javascript:void();" class="gototop">
+				Back to Top &nbsp; <i class="fa-solid fa-chevron-up"></i>
+			</a>
+
+		</div>
+	</footer>
+	<!--FOOTER-->
+</body>
+</html>
